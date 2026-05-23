@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!--Lee ZI Heng A25DW0434-->
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+	<link rel="stylesheet" href="style.css">
+    <script>
+        function calculateTax() {
+
+            var income =
+            parseFloat(document.getElementById("income").value);
+
+            var tax = 0;
+
+            if(income <= 5000)
+            {
+                tax = 0;
+            }
+
+            else if(income <= 20000)
+            {
+                tax = 150;
+            }
+
+            else if(income <= 35000)
+            {
+                tax = 600;
+            }
+
+            else if(income <= 50000)
+            {
+                tax = 1800;
+            }
+
+            else if(income <= 70000)
+            {
+                tax = 4400;
+            }
+
+            else if(income <= 100000)
+            {
+                tax = 10700;
+            }
+
+            else if(income <= 250000)
+            {
+                tax = 46700;
+            }
+
+            else if(income <= 400000)
+            {
+                tax = 83450;
+            }
+
+            else if(income <= 600000)
+            {
+                tax = 133450;
+            }
+
+            else if(income <= 1000000)
+            {
+                tax = 237450;
+            }
+
+            else if(income <= 2000000)
+            {
+                tax = 517450;
+            }
+
+            else
+            {
+                tax = income * 0.30;
+            }
+
+            document.getElementById("result").innerHTML =
+            "Tax Amount = RM " + tax.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Income Tax Calculator</h2>
+
+Yearly Income :
+<input type="text" id="income">
+
+<button onclick="calculateTax()">Calculate</button>
+
+<p id="result"></p>
+
+</body>
+</html>

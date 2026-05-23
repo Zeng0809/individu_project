@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!--Lee ZI Heng A25DW0434 -->
+<html>
+
+<head>
+
+    <title>BMI Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>BMI Checker</h1>
+
+        </div>
+
+        <div class="section">
+
+            <div class="card" align="center">
+
+                <input type="number" id="weight" placeholder="Weight (kg)">
+
+                <br>
+
+                <input type="number" id="height" placeholder="Height (m)">
+
+                <br>
+
+                <button onclick="calculateBMI()">Calculate BMI</button>
+
+                <h2 id="result"></h2>
+
+                <a class="btn" href="Tools.html">Back</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+
+function calculateBMI(){
+
+    let weight = Number(document.getElementById("weight").value);
+
+    let height = Number(document.getElementById("height").value);
+
+    let bmi = weight / (height * height);
+
+    document.getElementById("result").innerHTML = "BMI = " + bmi.toFixed(2);
+}
+
+</script>
+
+</body>
+
+</html>
